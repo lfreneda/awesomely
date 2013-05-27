@@ -20,11 +20,11 @@ namespace awesomely.Extensions
             return string.Format(provider, format, args);
         }
 
-		public static bool ContainsIn(this string str, string @in) {
+	public static bool ContainsIn(this string str, string @in) {
             return @in.IndexOf(str, StringComparison.Ordinal) != -1;
         }
 		
-		public static string From64(this string str) {
+	public static string From64(this string str) {
             var encodedDataAsBytes = Convert.FromBase64String(str);
             return System.Text.Encoding.UTF8.GetString(encodedDataAsBytes);
         }
