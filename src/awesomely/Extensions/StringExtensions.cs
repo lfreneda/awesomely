@@ -9,6 +9,12 @@ namespace awesomely.Extensions
             var r = new Regex("(?:[^a-z0-9 ]|(?<=['\"])s)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
             return r.Replace(str, String.Empty);
         }
+		 
+		public static void AppendToFile(this string str, string filePath) {
+            using (var sw = new StreamWriter(filePath, true)) {
+                sw.WriteLine(str);
+            }
+        }
 		
         public static string FormatWith(this string format, params object[] args) {
             if (format == null) throw new ArgumentNullException("format");
