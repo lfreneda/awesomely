@@ -7,6 +7,7 @@
     <authors>lfreneda</authors>
     <owners>lfreneda</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/lfreneda/awesomely</projectUrl>
     <description>
       "Awesomely" is personal library written in C#.
       You can think of it as bunch of helpers, functions, code to help us out in our daily development.
