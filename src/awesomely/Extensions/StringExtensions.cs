@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace awesomely.Extensions	{
@@ -24,6 +26,7 @@ namespace awesomely.Extensions	{
 			
 			public static IEnumerable<string> CreateEnumerable(this string filePath) {
 				var file = new StreamReader(filePath);
+			    string line;
 				while((line = file.ReadLine()) != null) {
 					yield return line.Trim();
 				}

@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C4531A8-5E56-4F0D-8945-60D76C99892A}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{279C5E5D-CC37-4391-8227-FD3299AA80CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>awesomely</RootNamespace>
-    <AssemblyName>awesomely</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Awesomely</RootNamespace>
+    <AssemblyName>Awesomely</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,8 +43,27 @@
   <ItemGroup>
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="OAuth\Facebook\FacebookConfiguration.cs" />
+    <Compile Include="OAuth\Facebook\FacebookExtractTokenFromText.cs" />
+    <Compile Include="OAuth\Facebook\FacebookUriAuthentication.cs" />
+    <Compile Include="OAuth\IConfiguration.cs" />
+    <Compile Include="OAuth\IExtractTokenFromText.cs" />
+    <Compile Include="OAuth\IUriAuthentication.cs" />
+    <Compile Include="OAuth\IWebRequestService.cs" />
+    <Compile Include="OAuth\OAuthAuthentication.cs" />
+    <Compile Include="OAuth\Orkut\OrkutConfiguration.cs" />
+    <Compile Include="OAuth\Orkut\OrkutExtractTokenFromText.cs" />
+    <Compile Include="OAuth\Orkut\OrkutUriAuthentication.cs" />
+    <Compile Include="OAuth\RequestType.cs" />
+    <Compile Include="OAuth\WebRequestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Awesomely.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
