@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="OAuth\Facebook\FacebookConfiguration.cs" />
     <Compile Include="OAuth\Facebook\FacebookExtractTokenFromText.cs" />
     <Compile Include="OAuth\Facebook\FacebookUriAuthentication.cs" />
