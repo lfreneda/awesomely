@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\EncondingStringExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\FormatStringExtensions.cs" />
+    <Compile Include="Extensions\HashStringExtensions.cs" />
+    <Compile Include="Extensions\FileStringExtensions.cs" />
     <Compile Include="OAuth\Facebook\FacebookConfiguration.cs" />
     <Compile Include="OAuth\Facebook\FacebookExtractTokenFromText.cs" />
     <Compile Include="OAuth\Facebook\FacebookUriAuthentication.cs" />
