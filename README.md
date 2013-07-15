@@ -30,6 +30,16 @@ Append - write/append current string to an file
 @"C:\temp\file.txt".AppendLine("One more file");
 ```
 
+GetMd5Hash - Generate MD5 hash from given string ( http://msdn.microsoft.com/en-us/library/system.security.cryptography.md5.aspx )
+```
+var hash = "string to be hashed".GetMd5Hash();
+```
+
+VerifyMd5Hash - Verify MD5 hash ( http://msdn.microsoft.com/en-us/library/system.security.cryptography.md5.aspx )
+```
+var isSameHash = "string to be hashed".VerifyMd5Hash("7d6e58d9755ebb6f26d15d8f6d748d0b");
+```
+
 ### EnumerableExtensions
 
 Each<T> - Alternative to foreach/for
