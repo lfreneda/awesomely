@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace awesomely.Extensions
+namespace Awesomely.Extensions
 {
     public static class EnumerableExtensions
     {

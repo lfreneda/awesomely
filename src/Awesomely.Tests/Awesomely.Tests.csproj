@@ -51,6 +51,7 @@
     <Compile Include="OAuth\OAuthAuthenticationTests.cs" />
     <Compile Include="OAuth\Orkut\OrkutExtractTokenFromTextTests.cs" />
     <Compile Include="OAuth\Orkut\OrkutUriAuthenticationTests.cs" />
+    <Compile Include="ObjectExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 
-namespace awesomely.Extensions
+namespace Awesomely.Extensions
 {
     public static class FileStringExtensions
     {

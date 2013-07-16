@@ -1,6 +1,6 @@
 using System;
 
-namespace awesomely.Extensions
+namespace Awesomely.Extensions
 {
     public static class EncondingStringExtensions
     {

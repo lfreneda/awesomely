@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace awesomely.Extensions
+namespace Awesomely.Extensions
 {
     public static class FormatStringExtensions
     {
