@@ -9,7 +9,11 @@ namespace Awesomely.Extensions
     {
         public static IEnumerable<IEnumerable<T>> Split<T>(this IEnumerable<T> source, int chunkSize)
         {
-            return source.Where((x, i) => i % chunkSize == 0).Select((x, i) => source.Skip(i * chunkSize).Take(chunkSize));
+             int i = 0;
+             var splits = from item in list
+                     group item by i++ % chunkSize into part
+                     select part.AsEnumerable();
+             return splits;
         }
 
         public static void Each<T>(this IEnumerable<T> enumerable, Action<T> action)
