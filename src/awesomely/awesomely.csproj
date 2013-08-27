@@ -49,6 +49,7 @@
     <Compile Include="Extensions\HashStringExtensions.cs" />
     <Compile Include="Extensions\FileStringExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="OAuth\Facebook\FacebookConfiguration.cs" />
     <Compile Include="OAuth\Facebook\FacebookExtractTokenFromText.cs" />
     <Compile Include="OAuth\Facebook\FacebookUriAuthentication.cs" />
