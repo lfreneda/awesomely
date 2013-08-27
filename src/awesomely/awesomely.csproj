@@ -45,6 +45,7 @@
     <Compile Include="Extensions\DictionaryExtensions.cs" />
     <Compile Include="Extensions\EncondingStringExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\FormatStringExtensions.cs" />
     <Compile Include="Extensions\HashStringExtensions.cs" />
     <Compile Include="Extensions\FileStringExtensions.cs" />
