@@ -10,7 +10,7 @@ namespace Awesomely.Extensions
         public static IEnumerable<IEnumerable<T>> Split<T>(this IEnumerable<T> source, int chunkSize)
         {
              int i = 0;
-             var splits = from item in list
+             var splits = from item in source
                      group item by i++ % chunkSize into part
                      select part.AsEnumerable();
              return splits;
