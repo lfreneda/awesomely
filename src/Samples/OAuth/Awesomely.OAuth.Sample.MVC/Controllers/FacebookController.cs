@@ -14,7 +14,7 @@ namespace Awesomely.OAuth.Sample.MVC.Controllers {
                 if (!string.IsNullOrEmpty(code)) {
 
                     var oAuthAuthentication = new OAuthAuthentication(new WebRequestService(),
-                                                                      new FacebookUriAuthentication(),
+                                                                      new FacebookUriAuthentication(Request.IsSecureConnection),
                                                                       new FacebookExtractTokenFromText());
 
                     if (oAuthAuthentication.Authenticate(code, RequestType.Get)) {

@@ -8,7 +8,7 @@ namespace Awesomely.OAuth.Sample.WebForms.Facebook {
 
             if (string.IsNullOrEmpty(Request["error_reason"])) {
 
-                var oAuthAuthentication = new OAuthAuthentication(new WebRequestService(), new FacebookUriAuthentication(), new FacebookExtractTokenFromText());
+                var oAuthAuthentication = new OAuthAuthentication(new WebRequestService(), new FacebookUriAuthentication(Request.IsSecureConnection), new FacebookExtractTokenFromText());
                 if (oAuthAuthentication.Authenticate(Request["code"], RequestType.Get)) {
 
                     var client = new FacebookClient(oAuthAuthentication.Token);
