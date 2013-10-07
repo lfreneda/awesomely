@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq.Expressions;
 
 namespace Awesomely.Extensions
@@ -13,7 +14,7 @@ namespace Awesomely.Extensions
             MemberExpression memberExpr = null;
             if (lambda.Body.NodeType == ExpressionType.Convert)
             {
-                memberExpr = ((UnaryExpression)lambda.Body).Operand as MemberExpression;
+                memberExpr = ((UnaryExpression) lambda.Body).Operand as MemberExpression;
             }
             else if (lambda.Body.NodeType == ExpressionType.MemberAccess)
             {
