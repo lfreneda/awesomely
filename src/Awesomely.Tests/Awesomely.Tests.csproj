@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyExtensionsTests.cs" />
     <Compile Include="EnumExtensionsTests.cs" />
     <Compile Include="FormatStringExtensionsTests.cs" />
     <Compile Include="OAuth\Facebook\FacebookExtractTokenFromTextTests.cs" />

@@ -8,6 +8,10 @@ namespace Awesomely.Extensions {
 
     public static class StringExtensions {
 
+        public static bool ContainIn(this string str, string @in) {
+            return @in.IndexOf(str, StringComparison.Ordinal) != -1;
+        }
+
         public static string RemoveNewLinesAndSpaces(this string str) {
             return str.ExceptChars(new HashSet<char>(new[] { ' ', '\t', '\n', '\r' }));
         }

@@ -8,8 +8,7 @@ namespace Awesomely.Tests {
     public class StringExtensionsTests {
 
         [Test]
-        public void RemoveNewLinesAndSpaces_GivenAString_ShouldRemoveNewLinesAndSpaces()
-        {
+        public void RemoveNewLinesAndSpaces_GivenAString_ShouldRemoveNewLinesAndSpaces() {
             const string givenString = @"oi
                                    tudo
                                    bom
@@ -19,25 +18,31 @@ namespace Awesomely.Tests {
         }
 
         [Test]
-        public void RemoveNewLinesAndSpaces_GivenOneMoreString_ShouldRemoveNewLinesAndSpaces()
-        {
+        public void RemoveNewLinesAndSpaces_GivenOneMoreString_ShouldRemoveNewLinesAndSpaces() {
             const string givenString = "\noi\ntudo\nbom           ?";
             givenString.RemoveNewLinesAndSpaces().Should().Be("oitudobom?");
         }
 
         [Test]
-        public void ExceptChars_GivenAString_ShouldExcludeCharacters()
-        {
-            "Can you remove 'a' of this phrase?".ExceptChars(new[] {'a'})
+        public void ExceptChars_GivenAString_ShouldExcludeCharacters() {
+            "Can you remove 'a' of this phrase?".ExceptChars(new[] { 'a' })
                 .Should().Be("Cn you remove '' of this phrse?");
         }
 
         [Test]
-        public void RemoveSpecialCharacters_GivenString_ShouldRemoveAllSpecialCharacters()
-        {
+        public void RemoveSpecialCharacters_GivenString_ShouldRemoveAllSpecialCharacters() {
             @"""!@#$%¨&*()_+{}?:>^`<+.-*/\qwertyuiopasdfghjklçzxcvbnm0123456789".RemoveSpecialCharacters()
                 .Should().Be("qwertyuiopasdfghjklçzxcvbnm0123456789");
         }
 
+        [Test]
+        public void ContainIn_GivenSubStringThatContainInAString_ShouldReturnTrue() {
+            "ikeCho".ContainIn("ILikeChocolate").Should().Be(true);
+        }
+
+        [Test]
+        public void ContainIn_GivenSubStringThatDoesNotContainInAString_ShouldReturnFalse() {
+            "kehocole".ContainIn("ILikeChocolate").Should().Be(false);
+        }
     }
 }
