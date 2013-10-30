@@ -54,7 +54,6 @@ namespace Awesomely.ServiceProcess
                 try
                 {
                     _timer.Enabled = false;
-
                     Execute();
                 }
                 catch (Exception ex)

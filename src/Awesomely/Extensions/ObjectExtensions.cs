@@ -38,33 +38,50 @@ namespace Awesomely.Extensions
 
             return dictionary;
         }
-        
-        public static void SetPropertyValue(this Object obj, object value, string propertyName) {
+
+        public static void SetPropertyValue(this Object obj, object value, string propertyName)
+        {
             PropertyInfo propertyInfo = obj.GetType().GetProperty(propertyName);
             propertyInfo.SetValue(obj, value, null);
         }
 
-        public static object GetPropertyValue(this Object obj, string propertyName) {
+        public static object GetPropertyValue(this Object obj, string propertyName)
+        {
             PropertyInfo propertyInfo = obj.GetType().GetProperty(propertyName);
             return propertyInfo.GetValue(obj, null);
         }
 
-        public static object GetFieldValue(this Object obj, string fieldName) {
+        public static object GetFieldValue(this Object obj, string fieldName)
+        {
             FieldInfo fieldInfo = obj.GetType().GetField(fieldName,
                 BindingFlags.Instance | BindingFlags.NonPublic);
             return fieldInfo.GetValue(obj);
         }
 
-        public static void SetFieldValue(this Object obj, object value, string fieldName) {
+        public static void SetFieldValue(this Object obj, object value, string fieldName)
+        {
             FieldInfo fieldInfo = obj.GetType().GetField(fieldName,
                 BindingFlags.Instance | BindingFlags.NonPublic);
             fieldInfo.SetValue(obj, value);
         }
 
-        public static void SetFieldValue(this Object obj, Type type, object value, string fieldName) {
+        public static void SetFieldValue(this Object obj, Type type, object value, string fieldName)
+        {
             FieldInfo fieldInfo = type.GetType().GetField(fieldName,
                 BindingFlags.Instance | BindingFlags.NonPublic);
             fieldInfo.SetValue(obj, value);
+        }
+
+        public static void InvokeMethod(this Object obj, string methodName, params object[] parameters)
+        {
+            obj.InvokeMethod<object>(methodName, parameters);
+        }
+
+        public static TReturn InvokeMethod<TReturn>(this Object obj, string methodName, params object[] parameters)
+        {
+            var method = obj.GetType().GetMethod(methodName, BindingFlags.NonPublic | BindingFlags.Instance);
+            var result = method.Invoke(obj, parameters);
+            return (TReturn)result;
         }
     }
 }

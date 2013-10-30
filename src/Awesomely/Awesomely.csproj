@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +68,9 @@
     <Compile Include="OAuth\RequestType.cs" />
     <Compile Include="OAuth\WebRequestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceProcess\AutoInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ServiceProcess\TimedService.cs">
       <SubType>Component</SubType>
     </Compile>
