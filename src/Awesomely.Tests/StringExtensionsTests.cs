@@ -25,8 +25,8 @@ namespace Awesomely.Tests {
 
         [Test]
         public void ExceptChars_GivenAString_ShouldExcludeCharacters() {
-            "Can you remove 'a' of this phrase?".ExceptChars(new[] { 'a' })
-                .Should().Be("Cn you remove '' of this phrse?");
+            "Can you remove 'a' from this phrase?".ExceptChars(new[] { 'a' })
+                .Should().Be("Cn you remove '' from this phrse?");
         }
 
         [Test]
