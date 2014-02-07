@@ -6,6 +6,14 @@ using System.Text.RegularExpressions;
 
 namespace Awesomely.Extensions {
 
+    public static class IntegerExtensions
+    {
+        public static bool Between(this int a, int b, int c)
+        {
+            return (a >= b) && (a <= c);
+        }
+    }
+
     public static class StringExtensions {
 
         public static bool ContainIn(this string str, string @in) {
@@ -17,7 +25,7 @@ namespace Awesomely.Extensions {
         }
 
         public static string RemoveSpecialCharacters(this string str) {
-            var r = new Regex("(?:[^a-z0-9|ç| ]|(?<=['\"])s)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
+            var r = new Regex("(?:[^a-z0-9|ï¿½| ]|(?<=['\"])s)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
             return r.Replace(str, String.Empty);
         }
 
