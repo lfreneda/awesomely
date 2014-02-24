@@ -5,15 +5,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Awesomely.Extensions {
-
-    public static class IntegerExtensions
-    {
-        public static bool Between(this int a, int b, int c)
-        {
-            return (a >= b) && (a <= c);
-        }
-    }
-
     public static class StringExtensions {
 
         public static bool ContainIn(this string str, string @in) {

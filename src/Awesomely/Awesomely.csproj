@@ -52,6 +52,7 @@
     <Compile Include="Extensions\FormatStringExtensions.cs" />
     <Compile Include="Extensions\HashStringExtensions.cs" />
     <Compile Include="Extensions\FileStringExtensions.cs" />
+    <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="OAuth\Facebook\FacebookConfiguration.cs" />
